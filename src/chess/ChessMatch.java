@@ -121,7 +121,7 @@ public class ChessMatch {
 		if (promoted == null) {
 			throw new IllegalStateException("There ir no piece to be promoted");
 		}
-		if (!type.equals("B") && !type.equals("N") && !type.equals("R") && !type.equals("Q")) {
+		if (!type.equals("B") && !type.equals("H") && !type.equals("T") && !type.equals("Q")) {
 			return promoted;
 		}
 		
@@ -139,7 +139,7 @@ public class ChessMatch {
 	
 	private ChessPiece newPiece(String type, Color color) {
 		if (type.equals("B")) return new Bishop(board, color);
-		if (type.equals("N")) return new Knight(board, color);
+		if (type.equals("H")) return new Knight(board, color);
 		if (type.equals("Q")) return new Queen(board, color);
 		return new Rook(board, color);
 	}
